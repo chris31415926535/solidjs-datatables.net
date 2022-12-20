@@ -4,8 +4,7 @@ import 'datatables.net';
 
 export function CreateDataTable(props: any) {
 
-    let numRows = props.numRows | 10;
-
+    let numRows = (props.numRows === null ? 10 : props.numRows);
 
     let table_id = String("table_id_" + Math.round(Math.random() * 10**8));
 
