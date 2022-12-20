@@ -2,12 +2,11 @@ import { Component, For } from 'solid-js';
 
 import jQuery from 'jquery';
 import 'datatables.net';
+import { CreateDataTable, Testing } from './components/DataTables';
 
 const App: Component = () => {
 
-  jQuery(function() {
-    jQuery('#table_id').dataTable();
-  });
+  jQuery(function() {jQuery('#table_id').dataTable();});
 
   let numRows = 500;
   let rowId = 0;
@@ -17,29 +16,9 @@ const App: Component = () => {
       
       <h1>DataTables.net in SolidJS</h1> 
 
-      <table id="table_id" >
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Column 1</th>
-                <th>Column 2</th>
-            </tr>
-        </thead>
-        <tbody>
-          <For each={new Array(numRows)}>
-          {
-            (_item) => 
-              <tr>
-                <td>{rowId++}</td>
-                <td>{Math.random()}</td>
-                <td>{Math.random()}</td>
-              </tr>
-            }
-          </For>
-        </tbody>
-      </table>
-   </div>
-  );
+      <CreateDataTable numRows={500} />
+    </div>
+      )
 };
 
 export default App;

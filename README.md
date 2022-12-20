@@ -4,6 +4,8 @@ This small demo shows the DataTables jQuery library working in SolidJS.
 
 This may not be the best solution! But it's the only way I've been able to get it to work.
 
+Note also! I haven't confirmed that reactivity works with this yet...
+
 There are four steps:
 
 1. Include the datatables css file in `index.html`.
